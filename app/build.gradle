@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.guru2'
+    namespace 'com.example.guru22'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.guru2"
+        applicationId "com.example.guru22"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -29,9 +29,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-    viewBinding {
-        enabled = true
     }
 }
 
