@@ -1,5 +1,6 @@
-package com.example.guru2
+package com.example.guru22
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
@@ -9,37 +10,51 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
-import com.example.guru2.databinding.ActivityMainBinding
+import com.example.guru22.databinding.ActivityMainBinding
 import java.util.Random
 
-class MainActivity : AppCompatActivity() {
+class dicescreen : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     val random = Random()
-    val num = random.nextInt(1)
+    val num1 = random.nextInt(5)
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_dicescreen)
 
         val btnResult = findViewById<Button>(R.id.btnResult)
 
         btnResult.setOnClickListener {
 /*
-            if (num == 0) {
+            if (num1 == 0) {
                 val text1 = findViewById<TextView>(R.id.resultTextView)
-                text1.text = "앞"
+                text1.text = "1"
+            } else if (num1 == 1) {
+                val text1 = findViewById<TextView>(R.id.resultTextView)
+                text1.text = "2"
+            } else if (num1 == 2) {
+                val text1 = findViewById<TextView>(R.id.resultTextView)
+                text1.text = "3"
+            } else if (num1 == 3) {
+                val text1 = findViewById<TextView>(R.id.resultTextView)
+                text1.text = "4"
+            } else if (num1 == 4) {
+                val text1 = findViewById<TextView>(R.id.resultTextView)
+                text1.text = "5"
             } else {
                 val text1 = findViewById<TextView>(R.id.resultTextView)
-                text1.text = "뒤"
-            }*/
-            val dialog = CustomDialog(this)
+                text1.text = "6"
+            }
+*/
+            val dialog = CustomDialog2(this)
             dialog.showDialog()
         }
     }
 }
 
 
-class CustomDialog(context: Context) {
+class CustomDialog2(context: Context) {
     private val dialog = Dialog(context)
     private lateinit var onClickListener: OnDialogClickListener
 
@@ -48,7 +63,7 @@ class CustomDialog(context: Context) {
     }
 
     fun showDialog() {
-        dialog.setContentView(R.layout.result)
+        dialog.setContentView(R.layout.result2)
         dialog.window!!.setLayout(
             WindowManager.LayoutParams.WRAP_CONTENT,
             WindowManager.LayoutParams.WRAP_CONTENT
@@ -74,4 +89,3 @@ class CustomDialog(context: Context) {
         fun onClicked(name: String)
     }
 }
-

@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         diceButton.setOnClickListener{
-            var intent= Intent(this,diceButton::class.java)
+            var intent= Intent(this,diceButtonresult::class.java)
             startActivity(intent)
         }
 

@@ -1,5 +1,6 @@
 package com.example.guru22
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -38,9 +39,8 @@ class coinButtonresult : AppCompatActivity() {
         btnOK=findViewById(R.id.buttonOK)
 
         btnOK.setOnClickListener{
-            when(Radio_group.checkedRadioButtonId){
-                // 다음 화면이랑 연결
-            }
+            var intent= Intent(this,coinscreen::class.java)
+            startActivity(intent)
         }
 
 
