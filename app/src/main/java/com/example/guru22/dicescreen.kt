@@ -79,9 +79,7 @@ class CustomDialog2(context: Context) {
 
         val btnClose = dialog.findViewById<Button>(R.id.btnClose)
         btnClose.setOnClickListener {
-            //종료버튼을 누르면 메인 화면으로 연결되는 걸 구현해야 함. 밑은 임시로 적음.
-            //onClickListener.onClicked(edit_name.text.toString())
-            dialog.dismiss()
+            System.exit(0)
         }
     }
 
